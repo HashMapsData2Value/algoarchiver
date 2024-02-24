@@ -44,3 +44,7 @@
 .component-spacing {
   margin-bottom: 20px;
 }
+
+.red-text {
+  color: red;
+}

@@ -3,36 +3,18 @@ import { useState } from 'react';
 import { useWallet } from '@txnlab/use-wallet'
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
-import { Dropdown } from 'primereact/dropdown';
 
 export default function ConnectMenu() {
   const { providers, activeAccount } = useWallet()
   const [visible, setVisible] = useState(false)
-  const [selectedNetwork, setSelectedNetwork] = useState("Testnet");
-
-// TODO: Provide a way to switch between networks
-//   const networkOptions = [
-//     { label: 'Testnet', value: 'Testnet' },
-//     { label: 'Mainnet', value: 'Mainnet' }, 
-//   ];
-
   
   return (
     <div>
         <div className="flex flex-wrap justify-content-center gap-2 mb-2">
-            <Button label={`Connect Wallet - ${selectedNetwork}`} icon="pi pi-external-link" onClick={() => setVisible(true)} />
-            </div>
+            <Button label={`Connect Wallet - ${import.meta.env.VITE_NETWORK}`} icon="pi pi-external-link" onClick={() => setVisible(true)} />
+        </div>
     <Dialog header="Wallets" visible={visible} style={{ width: '50vw' }} onHide={() => setVisible(false)}>
-    {/* <Dropdown 
-      value={selectedNetwork} 
-      options={networkOptions} 
-      onChange={(e) => {
-        setSelectedNetwork(e.value)
-        }}
-      placeholder="Select a Network"
-    /> */}
-        <h4>Network: {`${selectedNetwork}`}</h4>
-        <p className="m-0">
+        <h4>Network: {`${import.meta.env.VITE_NETWORK}`}</h4>
         {providers?.map((provider) => (
             <div key={provider.metadata.id}>
             <h4>
@@ -77,7 +59,6 @@ export default function ConnectMenu() {
             </div>
             </div>
         ))}
-        </p>
     </Dialog>
     </div>
   )
