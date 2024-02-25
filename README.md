@@ -2,7 +2,30 @@
 
 The purpose of AlgoArchiver is to provide a simple interface through which you can produce a hash fingerprint of a file and then upload it to the Algorand blockchain.
 
-## Branches, Hosting and .env variables
+## How to run locally
+
+To run locally, install bun and run the following in your terminall:
+
+```sh
+bun install
+bun run dev
+```
+
+(Alternatively, use npm or yarn over bun.)
+
+To run locally against testnet do the following:
+
+```sh
+cp .env.testnet.example .env
+```
+
+Or the following for localnet:
+
+```sh
+cp .env.localnet.example .env
+```
+
+## Branches, Hosting
 
 Staging is the default branch and is hosted here: https://algoarchiver-staging.onrender.com
 
@@ -11,16 +34,6 @@ Main is the production branch and is hosted here: https://algoarchiver.onrender.
 Staging points to the Algorand Testnet, Main points to the Algorand Mainnet.
 
 We do New-Feature-Branch -> Staging -> Main.
-
-When developing locally, create a .env at the root and fill it with the following for testnet:
-
-```
-VITE_NETWORK=testnet
-VITE_NODE_SERVER_URL=https://testnet-api.algonode.cloud
-VITE_NODE_TOKEN=
-VITE_PORT=443
-VITE_EXPLORER_TX_URL=https://testnet.explorer.perawallet.app/tx
-```
 
 ## Why?
 
