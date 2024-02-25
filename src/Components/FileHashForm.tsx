@@ -30,7 +30,7 @@ export default function FileHashForm({
         .join('')
       setHash(hashHex)
     } else {
-      ;(toast.current as Toast | null)?.show({
+      (toast.current as Toast | null)?.show({
         severity: 'error',
         summary: 'Error',
         detail: 'Please select a file.',
