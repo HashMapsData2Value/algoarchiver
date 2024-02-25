@@ -57,9 +57,9 @@ export default function ExplanationBox() {
           world will be flooded with AI generated media by malicious entities,
           2) regardless if your media is "real" an honest individual might
           mistake it as being AI generated. This is particularly problematic if
-          the media in quesiton serves as historical proof of war crimes or
+          the media in question serves as historical proof of war crimes or
           crimes against humanity. For every media illustrating that "X"
-          happened, an adversary could generate ad-hoc adverserial videos that
+          happened, an adversary could generate ad-hoc adversarial videos that
           attempt to convince a third party that "X" in fact did not happen, or
           that it is impossible to tell either way.
         </p>
@@ -71,7 +71,7 @@ export default function ExplanationBox() {
           blockchain like Algorand for posterity, future individuals will at
           least be able to verify that a piece of media existed at a certain
           point of time in the past. Furthermore, Algorand's blockchain history
-          is backed by a steady stream "state proofs", attestions to the state
+          is backed by a steady stream "state proofs", attestations to the state
           signed by the validators using Falcon keys. Falcon is a post-quantum
           signature scheme. Thus, unlike other blockchains, Algorand has
           resistance to future attacks by quantum computers attempting to
