@@ -25,7 +25,19 @@ export default function ExplanationBox() {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold">Welcome to AlgoArchiver!</h1>
+      <h1 className="text-4xl font-bold">
+        Welcome to AlgoArchiver!
+        <Button
+          icon="pi pi-github"
+          className="p-button-rounded p-button-outlined"
+          onClick={() =>
+            window.open(
+              'https://github.com/HashMapsData2Value/algoarchiver',
+              '_blank'
+            )
+          }
+        />
+      </h1>
       <p className="text-lg">
         This simple tool allows you to upload a fingerprint of a file to the
         Algorand blockchain.
@@ -67,7 +79,7 @@ export default function ExplanationBox() {
         </p>
       </Dialog>
 
-      {activeAddress && (
+      {!activeAddress && (
         <p className="text-lg">
           Please connect using your Algorand wallet below. The Algo token is
           required to upload the fingerprint to the blockchain. Algo can be

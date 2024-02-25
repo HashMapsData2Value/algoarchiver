@@ -15,6 +15,7 @@ import {
   useWallet,
 } from '@txnlab/use-wallet'
 import algosdk from 'algosdk'
+import Footer from './Components/Footer'
 
 const getDynamicPeraWalletConnect = async () => {
   const PeraWalletConnect = (await import('@perawallet/connect'))
@@ -85,30 +86,36 @@ function App() {
 
   return (
     <WalletProvider value={providers}>
-      <div className="component-spacing">
-        <ExplanationBox />
-      </div>
-      <div className="component-spacing">
-        <ConnectMenu />
-      </div>
-      <div className="component-spacing">
-        {activeAddress && <FileHashForm setHash={setHash} />}
-      </div>
-      <div className="component-spacing">
-        {activeAddress && (
-          <DescriptionInputArea desc={desc} setDesc={setDesc} />
-        )}
-      </div>
-      <div className="component-spacing">
-        {activeAddress && <PreviewBox fullMessage={fullMessage} />}
-      </div>
-      <div className="component-spacing">
-        {activeAddress && (
-          <UploadToChain
-            disabledButton={disabledButton}
-            fullMessage={fullMessage}
-          />
-        )}
+      <div className="p-d-flex p-flex-column" style={{ minHeight: '100vh' }}>
+        <div className="p-flex-grow-1">
+          <div className="component-spacing">
+            <ExplanationBox />
+          </div>
+          <div className="component-spacing">
+            <ConnectMenu />
+          </div>
+          <div className="component-spacing">
+            {activeAddress && <FileHashForm setHash={setHash} />}
+          </div>
+          <div className="component-spacing">
+            {activeAddress && (
+              <DescriptionInputArea desc={desc} setDesc={setDesc} />
+            )}
+          </div>
+          <div className="component-spacing">
+            {activeAddress && <PreviewBox fullMessage={fullMessage} />}
+          </div>
+          <div className="component-spacing">
+            {activeAddress && (
+              <UploadToChain
+                disabledButton={disabledButton}
+                fullMessage={fullMessage}
+              />
+            )}
+          </div>
+          <div className="component-spacing"></div>
+          <Footer />
+        </div>
       </div>
     </WalletProvider>
   )

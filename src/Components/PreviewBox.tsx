@@ -14,10 +14,10 @@ export default function PreviewBox({ fullMessage }: { fullMessage: string }) {
       <h1 className="text-4xl font-bold">Preview</h1>
       <p className="text-lg">
         <p>
-          Your wallet will ask you to sign a 0 Algo transaction from
-          {addrShortener(activeAddress || '')} to
-          {addrShortener(activeAddress || '')} with the following in the
-          notes field: {fullMessage}
+          Your wallet will ask you to sign a 0 Algo transaction from{' '}
+          {addrShortener(activeAddress || '')} to{' '}
+          {addrShortener(activeAddress || '')} with the following in the notes
+          field: {fullMessage}
         </p>
       </p>
     </div>
