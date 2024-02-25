@@ -21,7 +21,6 @@ export default function UploadToChain({
 }) {
   const { activeAddress, signTransactions, sendTransactions } = useWallet()
 
-  const [visible, setVisible] = useState(false)
   const [txId, setTxId] = useState('')
   const toast = useRef(null)
 
@@ -71,7 +70,6 @@ export default function UploadToChain({
         visible={txId !== ''}
         style={{ width: '50vw' }}
         onHide={() => {
-          setVisible(false)
           setTxId('')
         }}
       >

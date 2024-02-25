@@ -63,7 +63,7 @@ export default function ExplanationBox() {
           signed by the validators using Falcon keys. Falcon is a post-quantum
           signature scheme. Thus, unlike other blockchains, Algorand has
           resistance to future attacks by quantum computers attempting to
-          "rewrite" the history of the blockchain.{' '}
+          "rewrite" the history of the blockchain.
         </p>
       </Dialog>
 

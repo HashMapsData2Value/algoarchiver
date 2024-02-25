@@ -14,12 +14,12 @@ export default function DescriptionInputArea({
       <h1 className="text-4xl font-bold">Description</h1>
       <p className="text-lg">
         Please provide a short description of the file that can assist you in
-        searching for it in the future.
+        identifying its hash in the future.
       </p>
       <InputTextarea
         autoResize
         value={desc}
-        onChange={(e) => setDesc(e.target.value.slice(0, 100))}
+        onChange={(e) => setDesc(e.target.value.slice(0, 200))}
         rows={5}
         cols={50}
         style={styles}
