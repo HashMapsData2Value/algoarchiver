@@ -34,7 +34,3 @@ However, you can be proactive and address this situation today!
 
 By storing a fingerprint of your media in a decentralized, secure blockchain like Algorand for posterity, future individuals will at least be able to verify that a piece of media existed at a certain
 point of time in the past. Furthermore, Algorand's blockchain history is backed by a steady stream "state proofs", attestions to the state signed by the validators using Falcon keys. Falcon is a post-quantum signature scheme. Thus, unlike other blockchains, Algorand has resistance to future attacks by quantum computers attempting to "rewrite" the history of the blockchain.
-
-```
-
-```
